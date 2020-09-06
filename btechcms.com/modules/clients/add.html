@@ -1,0 +1,246 @@
+      
+            <!-- ============================================================== -->
+            <!-- Start right Content here -->
+            <!-- ============================================================== -->
+            <div class="content-page">
+                <!-- Start content -->
+                <div class="content">
+                    <div class="container-fluid">
+
+                        <!-- Page-Title -->
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="btn-group pull-right m-t-15" style="display: none">
+                                    <button type="button" class="btn btn-default dropdown-toggle waves-effect waves-light" data-toggle="dropdown" aria-expanded="false">Claim Form Options</button>
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btnGroupDrop1">
+                                        <a class="dropdown-item" href="#">Auto-Load Client Data</a>
+                                        <a class="dropdown-item" href="#">Duplicate Address for Insured</a>
+                                        <a class="dropdown-item" href="#">Dropdown Three</a>
+                                        <a class="dropdown-item" href="#">Dropdown Four</a>
+                                    </div>
+                                </div>
+
+                                <h4 class="page-title">Form Validation</h4>
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="#">BTECH CMS</a></li>
+                                    <li class="breadcrumb-item"><a href="#">Clients Management</a></li>
+                                    <li class="breadcrumb-item active">Add a Client</li>
+                                </ol>
+
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-md-12">
+
+                                <div class="card-box">
+                                    <h4 class="header-title m-t-0">NEW Client Entry Form</h4>
+
+							        <ul class="form-errors">
+							        	<:li tid="errors">{ERROR}<li:>
+							        </ul>
+                                    <form id="basicForm" action="clients/add.html" method="post">
+                                       <!-- <div class="form-group">
+                                            <label for="userName">Client No<span class="text-danger">*</span></label>
+                                            <input type="number" name="id" parsley-trigger="change" required
+                                                   placeholder="Enter client no" value="{ID}" class="form-control" id="userName">
+                                        </div>-->
+                                        <div class="form-group">
+                                            <label for="insuredIDNumber">Insured ID No.<span class="text-danger">*</span></label>
+                                            <input type="text" name="insured_id" parsley-trigger="change" required
+                                                   placeholder="Enter Insured ID Number" value="{INSURED_ID}" class="form-control" id="insuredIDNumber">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="dobdate">Client Date of Birth (DOB)<span class="text-danger">*</span></label>
+                                            <div class="input-group">
+                                                <input type="text" name="dobdate" value="{DOBDATE}" class="form-control" placeholder="yyyy-mm-dd" id="datepicker-autoclose">
+                                                <span class="input-group-addon bg-custom b-0"><i class="md md-event-note text-white"></i></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="emailAddress">Create Date<span class="text-danger">*</span></label>
+                                            <div class="input-group">
+                                                <input type="text" name="date" value="{DATE}" class="form-control" placeholder="yyyy-mm-dd" id="datepicker-autoclose1">
+                                                <span class="input-group-addon bg-custom b-0"><i class="md md-event-note text-white"></i></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="firstN">First Name<span class="text-danger">*</span></label>
+                                            <input name="first_name" value="{FIRST_NAME}" type="text" placeholder="First Name" required
+                                                   class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="lastN">Last Name<span class="text-danger">*</span></label>
+                                            <input type="text" required
+                                                   placeholder="Last Name" value="{LAST_NAME}" class="form-control" name="last_name">
+                                        </div>
+                                        
+                                         <div class="form-group">
+                                            <label for="address">Address<span class="text-danger">*</span></label>
+                                            <input  type="text" required
+                                                   placeholder="Address" value="{ADDRESS}" class="form-control" name="address">
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label for="city">City<span class="text-danger">*</span></label>
+                                            <input  type="text" required
+                                                   placeholder="City" class="form-control" value="{CITY}" name="city">
+                                        </div>
+                                        
+                                         <div class="form-group">
+                                            <label for="state">State<span class="text-danger">*</span></label>
+                                            <input  type="text" required
+                                                   placeholder="State" class="form-control" value="{STATE}" name="state">
+                                        
+                                            <label for="zip">Zip<span class="text-danger">*</span></label>
+                                            <input  type="text" required
+                                                   placeholder="Zip" class="form-control" value="{ZIP}" name="zip">
+                                        </div>
+                                        
+                                         <div class="form-group">
+                                            <label for="Country">Country<span class="text-danger">*</span></label>
+                                            <input  type="text" required
+                                                   placeholder="Country" value="{COUNTRY}" class="form-control" name="country">
+                                        </div>
+                                         <div class="form-group">
+                                            <label for="phoneNo">Phone no.<span class="text-danger">*</span></label>
+                                            <input  type="text" required
+                                                   placeholder="Phone no." value="{PHONE_NO}" class="form-control" name="phone_no">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="email">Email.<span class="text-danger">*</span></label>
+                                            <input  type="text" placeholder="Email" class="form-control" value="{EMAIL}" name="email">
+                                        </div>
+                                         <div class="form-group">
+                                            <label for="insuranceType">Insurance Type<span class="text-danger">*</span></label>
+                                            <select class="form-control" required name="insuranceplan">
+                                                <option value="BlueCross"{BLUECROSS_SELECTED}>BlueCross/BlueShield</option>
+                                                <option value="Florida Blue"{FLORIDABLUE_SELECTED}>Florida Blue</option>
+                                                <option value="Athnea"{ATHNEA_SELECTED}>Athnea</option>
+                                                <option value="Humana"{HUMANA_SELECTED}>Humana</option>
+                                                <option value="Cigna"{CIGNA_SELECTED}>Cigna</option>
+                                                <option value="Cigna EAP"{CIGNAEAP_SELECTED}>Cigna_EAP</option>
+                                                <option value="Aflac"{AFLAC_SELECTED}>Aflac</option>
+                                                <option value="EAP"{EAP_SELECTED}>EAP</option>
+                                            </select>   
+                                        </div>
+                                        
+
+                                        <div class="form-group text-right m-b-0">
+                                            <button class="btn btn-primary waves-effect waves-light" type="submit">
+                                                Submit
+                                            </button>
+                                            <a href="/clients.html" class="btn btn-secondary waves-effect m-l-5">
+                                                Cancel
+                                            </a>
+                                        </div>
+
+                                    </form>
+                                </div> <!-- end card-box -->
+                            </div>
+                            <!-- end col -->
+
+                            
+                        </div>
+                        <!-- end row -->
+
+                       
+
+                    </div> <!-- container -->
+
+                </div> <!-- content -->
+
+                <footer class="footer text-right">
+                    &copy; 2016 - 2017. All rights reserved.
+                </footer>
+
+            </div>
+
+
+            <!-- ============================================================== -->
+            <!-- End Right content here -->
+            <!-- ============================================================== -->
+
+
+            <!-- Right Sidebar -->
+            <div class="side-bar right-bar nicescroll">
+                <h4 class="text-center">Chat</h4>
+                <div class="contact-list nicescroll">
+                    <ul class="list-group contacts-list">
+                        <li class="list-group-item">
+                            <a href="#">
+                                <div class="avatar">
+                                    <img src="assets/images/users/avatar-1.jpg" alt="">
+                                </div>
+                                <span class="name">Chadengle</span>
+                                <i class="fa fa-circle online"></i>
+                            </a>
+                            <span class="clearfix"></span>
+                        </li>
+                        
+                        
+                        <li class="list-group-item">
+                            <a href="#">
+                                <div class="avatar">
+                                    <img src="assets/images/users/avatar-4.jpg" alt="">
+                                </div>
+                                <span class="name">Kurafire</span>
+                                <i class="fa fa-circle online"></i>
+                            </a>
+                            <span class="clearfix"></span>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#">
+                                <div class="avatar">
+                                    <img src="assets/images/users/avatar-5.jpg" alt="">
+                                </div>
+                                <span class="name">Shahedk</span>
+                                <i class="fa fa-circle away"></i>
+                            </a>
+                            <span class="clearfix"></span>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#">
+                                <div class="avatar">
+                                    <img src="assets/images/users/avatar-6.jpg" alt="">
+                                </div>
+                                <span class="name">Adhamdannaway</span>
+                                <i class="fa fa-circle away"></i>
+                            </a>
+                            <span class="clearfix"></span>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#">
+                                <div class="avatar">
+                                    <img src="assets/images/users/avatar-7.jpg" alt="">
+                                </div>
+                                <span class="name">Ok</span>
+                                <i class="fa fa-circle away"></i>
+                            </a>
+                            <span class="clearfix"></span>
+                        </li>
+                        
+                       
+                       
+                    </ul>
+                </div>
+            </div>
+            <!-- /Right-bar -->
+
+        </div>
+        <!-- END wrapper -->
+<script>
+window.addEventListener('load', function() {
+    $('#datepicker-autoclose').datepicker({
+        format: 'yyyy-mm-dd',
+        autoclose: true,
+        todayHighlight: true
+    });
+     $('#datepicker-autoclose1').datepicker({
+        format: 'yyyy-mm-dd',
+        autoclose: true,
+        todayHighlight: true
+    });
+});
+</script>

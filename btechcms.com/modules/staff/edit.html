@@ -1,0 +1,209 @@
+<!-- ============================================================== -->
+<!-- Start right Content here -->
+<!-- ============================================================== -->
+<div class="content-page">
+	<!-- Start content -->
+	<div class="content">
+		<div class="container-fluid">
+
+			<!-- Page-Title -->
+			<div class="row">
+				<div class="col-sm-12">
+					<h4 class="page-title">Edit a staff member</h4>
+				</div>
+			</div>
+
+
+			<div class="row">
+				<div class="col-md-12">
+
+					<div class="card-box">
+						<h4 class="header-title m-t-0">Staff Member Entry Form</h4>
+
+						<ul class="form-errors">
+							<:li tid="errors">{ERROR}<li:>
+						</ul>
+						<form id="basicForm" action="staff/edit/{ID}.html" method="post" enctype="multipart/form-data">
+							<input type="hidden" name="id" value="{ID}" />
+							<div class="form-group">
+								<label for="firstname">First Name<span class="text-danger">*</span></label>
+								<input type="text" name="firstname" parsley-trigger="change" required
+									placeholder="First Name" class="form-control" id="firstname" value="{FIRSTNAME}">
+							</div>
+							<div class="form-group">
+								<label for="lastname">Last Name<span class="text-danger">*</span></label>
+								<input type="text" name="lastname" parsley-trigger="change" required
+									placeholder="Last Name" class="form-control" id="lastname" value="{LASTNAME}">
+							</div>
+							<div class="form-group">
+								<label for="email">E-Mail address<span class="text-danger">*</span></label>
+								<input readonly name="email" id="email" type="text" placeholder="E-Mail Address" required class="form-control" value="{EMAIL}">
+							</div>
+							<div class="form-group">
+								<label for="password">Password <span style="font-size: 9px">(leave blank if you want to keep the current password)</span><span class="text-danger">*</span></label>
+								<input type="password"
+									placeholder="Password" class="form-control" name="password" id="password" value="">
+							</div>
+							
+							<div class="form-group">
+								<label for="phone">Phone number</label>
+								<input type="text"
+									placeholder="Phone number" class="form-control" name="phone" id="phone" value="{PHONE}">
+							</div>
+							
+							<div class="form-group">
+								<input type="checkbox"{IS_ADMIN}
+									placeholder="Phone number" value="true" name="isAdmin" id="isAdmin"> 
+								<label for="isAdmin" style="font-weight: normal">Give Business Administrator privileges</label>
+
+							</div>
+							
+
+							<div class="form-group text-right m-b-0">
+								<button class="btn btn-primary waves-effect waves-light" type="submit">
+									Submit
+								</button>
+								<button type="reset" class="btn btn-secondary waves-effect m-l-5">
+									Cancel
+								</button>
+							</div>
+
+						</form>
+					</div> <!-- end card-box -->
+				</div>
+				<!-- end col -->
+
+				
+			</div>
+			<!-- end row -->
+
+			
+
+		</div> <!-- container -->
+
+	</div> <!-- content -->
+
+	<footer class="footer text-right">
+		&copy; 2016 - 2017. All rights reserved.
+	</footer>
+
+</div>
+
+
+<!-- ============================================================== -->
+<!-- End Right content here -->
+<!-- ============================================================== -->
+
+
+<!-- Right Sidebar -->
+<div class="side-bar right-bar nicescroll">
+	<h4 class="text-center">Chat</h4>
+	<div class="contact-list nicescroll">
+		<ul class="list-group contacts-list">
+			<li class="list-group-item">
+				<a href="#">
+					<div class="avatar">
+						<img src="assets/images/users/avatar-1.jpg" alt="">
+					</div>
+					<span class="name">Chadengle</span>
+					<i class="fa fa-circle online"></i>
+				</a>
+				<span class="clearfix"></span>
+			</li>
+			<li class="list-group-item">
+				<a href="#">
+					<div class="avatar">
+						<img src="assets/images/users/avatar-2.jpg" alt="">
+					</div>
+					<span class="name">Tomaslau</span>
+					<i class="fa fa-circle online"></i>
+				</a>
+				<span class="clearfix"></span>
+			</li>
+			<li class="list-group-item">
+				<a href="#">
+					<div class="avatar">
+						<img src="assets/images/users/avatar-3.jpg" alt="">
+					</div>
+					<span class="name">Stillnotdavid</span>
+					<i class="fa fa-circle online"></i>
+				</a>
+				<span class="clearfix"></span>
+			</li>
+			<li class="list-group-item">
+				<a href="#">
+					<div class="avatar">
+						<img src="assets/images/users/avatar-4.jpg" alt="">
+					</div>
+					<span class="name">Kurafire</span>
+					<i class="fa fa-circle online"></i>
+				</a>
+				<span class="clearfix"></span>
+			</li>
+			<li class="list-group-item">
+				<a href="#">
+					<div class="avatar">
+						<img src="assets/images/users/avatar-5.jpg" alt="">
+					</div>
+					<span class="name">Shahedk</span>
+					<i class="fa fa-circle away"></i>
+				</a>
+				<span class="clearfix"></span>
+			</li>
+			<li class="list-group-item">
+				<a href="#">
+					<div class="avatar">
+						<img src="assets/images/users/avatar-6.jpg" alt="">
+					</div>
+					<span class="name">Adhamdannaway</span>
+					<i class="fa fa-circle away"></i>
+				</a>
+				<span class="clearfix"></span>
+			</li>
+			<li class="list-group-item">
+				<a href="#">
+					<div class="avatar">
+						<img src="assets/images/users/avatar-7.jpg" alt="">
+					</div>
+					<span class="name">Ok</span>
+					<i class="fa fa-circle away"></i>
+				</a>
+				<span class="clearfix"></span>
+			</li>
+			<li class="list-group-item">
+				<a href="#">
+					<div class="avatar">
+						<img src="assets/images/users/avatar-8.jpg" alt="">
+					</div>
+					<span class="name">Arashasghari</span>
+					<i class="fa fa-circle offline"></i>
+				</a>
+				<span class="clearfix"></span>
+			</li>
+			<li class="list-group-item">
+				<a href="#">
+					<div class="avatar">
+						<img src="assets/images/users/avatar-9.jpg" alt="">
+					</div>
+					<span class="name">Joshaustin</span>
+					<i class="fa fa-circle offline"></i>
+				</a>
+				<span class="clearfix"></span>
+			</li>
+			<li class="list-group-item">
+				<a href="#">
+					<div class="avatar">
+						<img src="assets/images/users/avatar-10.jpg" alt="">
+					</div>
+					<span class="name">Sortino</span>
+					<i class="fa fa-circle offline"></i>
+				</a>
+				<span class="clearfix"></span>
+			</li>
+		</ul>
+	</div>
+</div>
+<!-- /Right-bar -->
+
+</div>
+<!-- END wrapper -->
